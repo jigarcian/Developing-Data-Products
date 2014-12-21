@@ -11,17 +11,17 @@ shinyServer(function(input,output){
     to.z <- l
     S.x  <- c(from.z, seq(from.z, to.z, 0.01), to.z)
     S.y  <- c(0, dnorm(seq(from.z, to.z, 0.01)), 0)
-    polygon(S.x,S.y, col="red")
+    polygon(S.x,S.y, col="grey")
     from.z <- h
     to.z <- 3
     S.x  <- c(from.z, seq(from.z, to.z, 0.01), to.z)
     S.y  <- c(0, dnorm(seq(from.z, to.z, 0.01)), 0)
-    polygon(S.x,S.y, col="red")
+    polygon(S.x,S.y, col="grey")
     from.z <- l
     to.z <- h
     S.x  <- c(from.z, seq(from.z, to.z, 0.01), to.z)
     S.y  <- c(0, dnorm(seq(from.z, to.z, 0.01)), 0)
-    polygon(S.x,S.y, col="green")    
+    polygon(S.x,S.y, col="yellow")    
   })
   
   output$result <- renderPrint({
